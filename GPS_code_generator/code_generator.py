@@ -11,7 +11,7 @@ def generateG1RowCode():
 def generateG2RowCode():
     global G2_row
     new_bit = (G2_row[5] ^ G2_row[7] ^ G2_row[8] ^ G2_row[9]) ^ (G2_row[1] ^ G2_row[2])
-    returned_bit = G2_row[G2_taps.get(satellite_number)[0]] ^ G2_row[G2_taps.get(satellite_number)[1]]
+    returned_bit = G2_row[G2_taps.get(satellite_number)[0] - 1] ^ G2_row[G2_taps.get(satellite_number)[1] - 1]
     G2_row = [new_bit] + G2_row[:9]
     return returned_bit
 
