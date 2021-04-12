@@ -50,4 +50,4 @@ def flash_sort(input_array):
 algoTester = AlgoTester()
 algoTester.setTestArray([10, 29, 18, 2, 4, 91, 105, 0, 0, 101, -10])
 algoTester.calculateTime(flash_sort, start_amount=1000, epochs=10)
-algoTester.drawGraphics()
+algoTester.drawGraphics('FlashSort Algorythm')
