@@ -1,3 +1,6 @@
+from testFunc import AlgoTester
+
+
 def flash_sort(input_array):
     array_length = len(input_array)
     m = int(array_length * 0.42)
@@ -44,4 +47,7 @@ def flash_sort(input_array):
     return input_array
 
 
-print(flash_sort([10, 29, 18, 2, 4, 91, 105, 0, 0, 101, -10]))
+algoTester = AlgoTester()
+algoTester.setTestArray([10, 29, 18, 2, 4, 91, 105, 0, 0, 101, -10])
+algoTester.calculateTime(flash_sort, start_amount=1000, epochs=10)
+algoTester.drawGraphics()

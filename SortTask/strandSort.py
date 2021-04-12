@@ -1,3 +1,6 @@
+from testFunc import AlgoTester
+
+
 def strand_sort(input_arr, descending_order=False):
     output_arr = []
     while len(input_arr):
@@ -50,4 +53,7 @@ def merge(arr1, arr2, descending_order):
     return united_array
 
 
-print(strand_sort([10, 29, 18, 2, 4, 91, 105, 0, 0, 101, -10], False))
+algoTester = AlgoTester()
+algoTester.setTestArray([10, 29, 18, 2, 4, 91, 105, 0, 0, 101, -10])
+algoTester.calculateTime(strand_sort, start_amount=1000, epochs=10)
+algoTester.drawGraphics()
