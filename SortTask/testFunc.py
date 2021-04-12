@@ -35,7 +35,7 @@ class AlgoTester:
                     else:
                         self.results.update({i: [end_time - start_time]})
 
-    def drawGraphics(self):
+    def drawGraphics(self, name):
         x = self.results.keys()
         y = []
         for key in x:
@@ -46,6 +46,7 @@ class AlgoTester:
             y.append(sum / len(list))
         plt.plot(y)
         plt.xticks(range(len(x)), x)
+        plt.title(name)
         plt.ylabel('Time in ms')
         plt.xlabel('Amount of array')
         plt.fill_between(range(len(x)), y, alpha=0.4)
