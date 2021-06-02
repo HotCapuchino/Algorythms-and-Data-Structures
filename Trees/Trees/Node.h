@@ -14,5 +14,6 @@ public:
 	string getData();
 	int getChildrenAmount();
 	~Node();
+	friend ostream& operator <<(ostream& out,  Node* node);
 };
 

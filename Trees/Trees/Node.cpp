@@ -17,3 +17,9 @@ Node::~Node() {
 	delete left;
 	delete right;
 }
+
+ostream& operator <<(ostream& out, Node* node) {
+	out << "Node data: " << node->getData();
+	return out;
+}
+
